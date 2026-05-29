@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [0.70.6] - 2026-05-29
+
+### Fixed
+
+- Workaround for the convert_graph_to_onnx import which was causing issues with some versions of transformers. The import is now done inside the if statement where it's used, so it should only be imported when ONNX support is being used.
+- Renamed AutoModelWithLMHead to AutoModelForMaskedLM to fix compatibility issues with transformers
+- Fixed multiple compatibility issues with updated implementations of tokenizer classes etc.
+
 ## [0.70.5] - 2025-08-26
 
 ### Fixed
